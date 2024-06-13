@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.4/dist/css/splide.min.css">
+    <link rel="stylesheet" href="general/main.css">
+</head>
+<body class="overflow-hidden" id="particles-js" style="scroll-behavior: smooth;">
+    <!-- Pre Loader -->
+    <div id="preLoader">
+        <div class="container-load">
+            <div class="text">Loading...</div>
+            <div class="loader-box">
+                <div class="box">
+                    <div class="line_box"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Pre Loader -->
+
+    <div id="btn-menu" onclick="menuBtnFunction(event)">
+        <span></span>
+        <span></span>
+    </div>
+
+    <div id="menu-popup">
+        <ul>
+          <li>
+            <a href="#about">
+                About
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_210)">
+                    <path d="M15.75 1.5C4.5 1.5 3 12 2.25 16.5H3.7485C4.248 14.0002 5.49825 12.6255 7.5 12.375C10.5 12 12.75 9.375 13.5 7.125L12.375 6.375L13.125 5.625C13.875 4.875 14.628 3.75 15.75 1.5Z" fill="#2B2B2B"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3_210">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Read bio</span>
+            </a>
+          </li>
+          <li>
+            <a href="#techstack">
+                Tech Stack
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_219)">
+                    <path d="M12.7636 11.272L9.25 14.6259L5.73638 11.272C3.10301 11.381 1 13.4376 1 15.9759V16.3134C1 17.245 1.79185 18.0009 2.76786 18.0009H15.7321C16.7081 18.0009 17.5 17.245 17.5 16.3134V15.9759C17.5 13.4376 15.397 11.381 12.7636 11.272ZM1.50089 2.80635L1.73661 2.85909V4.91221C1.47879 5.05987 1.29464 5.31651 1.29464 5.62589C1.29464 5.9212 1.46406 6.16729 1.70346 6.31846L1.12891 8.5087C1.06629 8.75128 1.20625 9.00089 1.40882 9.00089H2.94833C3.15089 9.00089 3.29085 8.75128 3.22824 8.5087L2.65368 6.31846C2.89308 6.16729 3.0625 5.9212 3.0625 5.62589C3.0625 5.31651 2.87835 5.05987 2.62054 4.91221V3.06299L5.05134 3.62198C4.7346 4.22667 4.53571 4.90167 4.53571 5.62589C4.53571 8.11143 6.64609 10.1259 9.25 10.1259C11.8539 10.1259 13.9643 8.11143 13.9643 5.62589C13.9643 4.90167 13.7691 4.22667 13.4487 3.62198L16.9954 2.80635C17.6657 2.65166 17.6657 1.85362 16.9954 1.69893L9.98292 0.0817384C9.50413 -0.0272461 8.99955 -0.0272461 8.52076 0.0817384L1.50089 1.69541C0.834263 1.8501 0.834263 2.65166 1.50089 2.80635Z" fill="black"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3_219">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>view tech stack</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects">
+                Projects
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_207)">
+                    <path d="M6.75 9.75V12H11.25V9.75H16.5V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V9.75H6.75ZM8.25 8.25H9.75V10.5H8.25V8.25ZM5.25 3.75V1.5C5.25 1.30109 5.32902 1.11032 5.46967 0.96967C5.61032 0.829018 5.80109 0.75 6 0.75H12C12.1989 0.75 12.3897 0.829018 12.5303 0.96967C12.671 1.11032 12.75 1.30109 12.75 1.5V3.75H15.75C15.9489 3.75 16.1397 3.82902 16.2803 3.96967C16.421 4.11032 16.5 4.30109 16.5 4.5V8.25H11.25V6.75H6.75V8.25H1.5V4.5C1.5 4.30109 1.57902 4.11032 1.71967 3.96967C1.86032 3.82902 2.05109 3.75 2.25 3.75H5.25ZM6.75 2.25V3.75H11.25V2.25H6.75Z" fill="#2B2B2B"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3_207">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>view case studies</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+                Contact
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3_213)">
+                    <path d="M4.84125 14.25L1.5 16.875V3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25H15.75C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3V13.5C16.5 13.6989 16.421 13.8897 16.2803 14.0303C16.1397 14.171 15.9489 14.25 15.75 14.25H4.84125Z" fill="#2B2B2B"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_3_213">
+                    <rect width="18" height="18" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>get in touch</span>
+            </a>
+          </li>
+          <li>
+            <div class="toggle-container">
+                <input type="checkbox" id="good" class="toggle">
+                <label for="good" class="label">
+                  <div class="ball"></div>
+                  <div class="background">
+                    <div class="fill"></div>
+                  </div>
+                  <div class="checked"><i class="fa-solid fa-check"></i></div>
+                </label>
+                <span>Change theme</span>
+            </div>
+          </li>
+        </ul>
+    </div>
+
+    <div id="backdrop" onclick="menuBtnFunction(event)"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container-fluid">
+            <div class="header-wrapper d-flex align-items-center justify-content-between p-relative-1">
+                <a href="#" class="logo">Portfolio</a>
+
+                <nav class="navbar">
+                    <ul class="menu">
+                        <li class="menu-item active link-hover">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_204)">
+                                <path d="M15 14.9999C15 15.1989 14.921 15.3896 14.7803 15.5303C14.6397 15.6709 14.4489 15.7499 14.25 15.7499H3.75C3.55109 15.7499 3.36032 15.6709 3.21967 15.5303C3.07902 15.3896 3 15.1989 3 14.9999V8.24994H0.75L8.49525 1.20894C8.63333 1.0833 8.81331 1.01367 9 1.01367C9.18669 1.01367 9.36667 1.0833 9.50475 1.20894L17.25 8.24994H15V14.9999Z" fill="#2B2B2B"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_204">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#" class="active nav-link">Home</a>
+                        </li>
+                        <li class="menu-item link-hover">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_210)">
+                                <path d="M15.75 1.5C4.5 1.5 3 12 2.25 16.5H3.7485C4.248 14.0002 5.49825 12.6255 7.5 12.375C10.5 12 12.75 9.375 13.5 7.125L12.375 6.375L13.125 5.625C13.875 4.875 14.628 3.75 15.75 1.5Z" fill="#2B2B2B"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_210">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                        <li class="menu-item link-hover">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_219)">
+                                <path d="M12.7636 11.272L9.25 14.6259L5.73638 11.272C3.10301 11.381 1 13.4376 1 15.9759V16.3134C1 17.245 1.79185 18.0009 2.76786 18.0009H15.7321C16.7081 18.0009 17.5 17.245 17.5 16.3134V15.9759C17.5 13.4376 15.397 11.381 12.7636 11.272ZM1.50089 2.80635L1.73661 2.85909V4.91221C1.47879 5.05987 1.29464 5.31651 1.29464 5.62589C1.29464 5.9212 1.46406 6.16729 1.70346 6.31846L1.12891 8.5087C1.06629 8.75128 1.20625 9.00089 1.40882 9.00089H2.94833C3.15089 9.00089 3.29085 8.75128 3.22824 8.5087L2.65368 6.31846C2.89308 6.16729 3.0625 5.9212 3.0625 5.62589C3.0625 5.31651 2.87835 5.05987 2.62054 4.91221V3.06299L5.05134 3.62198C4.7346 4.22667 4.53571 4.90167 4.53571 5.62589C4.53571 8.11143 6.64609 10.1259 9.25 10.1259C11.8539 10.1259 13.9643 8.11143 13.9643 5.62589C13.9643 4.90167 13.7691 4.22667 13.4487 3.62198L16.9954 2.80635C17.6657 2.65166 17.6657 1.85362 16.9954 1.69893L9.98292 0.0817384C9.50413 -0.0272461 8.99955 -0.0272461 8.52076 0.0817384L1.50089 1.69541C0.834263 1.8501 0.834263 2.65166 1.50089 2.80635Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_219">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#techstack" class="nav-link">Tech Stack</a>
+                        </li>
+                        <li class="menu-item link-hover">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_207)">
+                                <path d="M6.75 9.75V12H11.25V9.75H16.5V15C16.5 15.1989 16.421 15.3897 16.2803 15.5303C16.1397 15.671 15.9489 15.75 15.75 15.75H2.25C2.05109 15.75 1.86032 15.671 1.71967 15.5303C1.57902 15.3897 1.5 15.1989 1.5 15V9.75H6.75ZM8.25 8.25H9.75V10.5H8.25V8.25ZM5.25 3.75V1.5C5.25 1.30109 5.32902 1.11032 5.46967 0.96967C5.61032 0.829018 5.80109 0.75 6 0.75H12C12.1989 0.75 12.3897 0.829018 12.5303 0.96967C12.671 1.11032 12.75 1.30109 12.75 1.5V3.75H15.75C15.9489 3.75 16.1397 3.82902 16.2803 3.96967C16.421 4.11032 16.5 4.30109 16.5 4.5V8.25H11.25V6.75H6.75V8.25H1.5V4.5C1.5 4.30109 1.57902 4.11032 1.71967 3.96967C1.86032 3.82902 2.05109 3.75 2.25 3.75H5.25ZM6.75 2.25V3.75H11.25V2.25H6.75Z" fill="#2B2B2B"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_207">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#projects" class="nav-link">Projects</a>
+                        </li>
+                        <li class="menu-item link-hover">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_3_213)">
+                                <path d="M4.84125 14.25L1.5 16.875V3C1.5 2.80109 1.57902 2.61032 1.71967 2.46967C1.86032 2.32902 2.05109 2.25 2.25 2.25H15.75C15.9489 2.25 16.1397 2.32902 16.2803 2.46967C16.421 2.61032 16.5 2.80109 16.5 3V13.5C16.5 13.6989 16.421 13.8897 16.2803 14.0303C16.1397 14.171 15.9489 14.25 15.75 14.25H4.84125Z" fill="#2B2B2B"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_3_213">
+                                <rect width="18" height="18" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <a href="#contact" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+
+                    <button id="change-theme" class="dark-active d-none" onClick="changeTheme()">
+                        <i class="fa-solid fa-moon" data-text="Theme Dark"></i>
+                        <i class="fa-solid fa-sun" data-text="Theme Light"></i>
+                    </button>
+                </nav>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Start Home -->
+    <section id="sectionHome">
+        <div class="sectionHome__wrapper container p-relative-1">
+            <div class="row">
+                <div class="wrapper__left col-md-6 col-12">
+                    <div class="sectionHome__wrapper--content">
+                        <h3>Hello, My name is</h3>
+                        <h1>Huu Bang Mai</h1>
+                        <h3>And, I'm <span class="multi-text"></span></h3>
+                        <p class="text-desc">Based in Binh Chanh, Ho Chi Minh city, Viet Nam. I have developed many types of front-ends Ecommerce websites.</p>
+                    </div>
+                    <div class="sectionHome__wrapper--social">
+                        <a href="https://github.com/HuuBag11/" title="Github">
+                            <img src="./images/icons/icon-two.svg" alt="">
+                        </a>
+                        <a href="https://www.facebook.com/huu.bang.10420321/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="/">
+                            <img src="./images/icons/social_linkedin-with-circle.svg" alt="">
+                        </a>
+                    </div>
+                    <a href="./downloads/CV_MaiHuubang_FrontEndDeveloper.pdf" class="btn-download-cv button--primary" data-hover="Download CV" download="CV_MaiHuubang_FrontEndDeveloper">
+                        <span>Download CV</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                            <path d="M1.33341 10.9523H10.6667V6.28564H11.8334V11.619C11.8334 11.7958 11.772 11.9654 11.6626 12.0904C11.5532 12.2154 11.4048 12.2856 11.2501 12.2856H0.750081C0.595372 12.2856 0.446999 12.2154 0.337602 12.0904C0.228206 11.9654 0.166748 11.7958 0.166748 11.619V6.28564H1.33341V10.9523ZM7.16675 4.28564H10.0834L6.00008 8.95231L1.91675 4.28564H4.83342V0.285645H7.16675V4.28564Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="wrapper__right col-md-6 col-12">
+                    <div class="wrapper__right--image">
+                        <img src="./images/image-avt.jpg" alt="image section home">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Home -->
+
+    <!-- Start About -->
+    <section id="about">
+        <div class="about__wrapper container">
+            <div class="row">
+                <div class="col-md-8 col-12 about-content mr-auto p-relative-1">
+                    <h1 class="title section-title" >About me</h1>
+                    <div class="desc section-desc text-desc"> With two years of experience in  the Font-end developer, I would like to use my knowledge and experience to do the job effectively. Professional development and being able to become a key employee is my goal.</div>
+                    
+                    <h1 class="section-title title">Work Experience</h1>
+                    <ul class="list-item">
+                        <li class="item">
+                            <div class="item-top d-flex align-items-center justify-content-between">
+                                <h1 class="title">Front-end Web Developer</h1>
+                                <span class="d-block position">Full Time</span>
+                            </div>
+                            <div class="item-bottom d-flex align-items-center">
+                                <p><i class="fa-solid fa-building"></i>NamTech Solution</p>
+                                <p><i class="fa-solid fa-location-dot"></i>Tan Binh, Ho Chi Minh City</p>
+                                <p class="date"><i class="fa-solid fa-calendar-days"></i>Mar 2022 - May 2024</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h1 class="section-title title">Education</h1>
+                    <ul class="list-item">
+                        <li class="item">
+                            <div class="item-top d-flex align-items-center justify-content-between">
+                                <h1 class="title">Ton Duc Thang University</h1>
+                                <span class="d-none position">Full Time</span>
+                            </div>
+                            <div class="item-bottom d-flex align-items-center">
+                                <p><i class="fa-solid fa-building"></i>Software Technology</p>
+                                <p><i class="fa-solid fa-location-dot"></i>7 District, Ho Chi Minh City</p>
+                                <p class="date"><i class="fa-solid fa-calendar-days"></i>Aug 2018 - Aug 2022</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About -->
+
+    <!-- Start Tech stack -->
+    <section id="techstack">
+        <div class="techstack__wrapper container p-relative-1">
+            <h1 class="title section-title" data-text="Title">My Tech Stack</h1>
+            <div class="desc section-desc text-desc"> Technologies I’ve been working with recently</div>
+
+            <ul class="list__item row">
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="html">
+                        <img src="./images/vscode-icons.png" alt="">
+                    </div>
+                </li>
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="CSS">
+                        <img src="./images/css-image.png" alt="">
+                    </div>
+                </li>
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="JS">
+                        <img src="./images/js-image.png" alt="">
+                    </div>
+                </li>
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="BOOTSTRAP">
+                        <img src="./images/logos_bootstrap.png" alt="">
+                    </div>
+                </li>
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="Git">
+                        <img src="./images/logos_git-icon.png" alt="" >
+                    </div>
+                </li>
+                <li class="col-md-2 col-2">
+                    <div class="img-wrapper" data-text="VSCODE">
+                        <img src="./images/vscode-logo.png" alt="" >
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- End Tech stack -->
+    
+    <!-- Start Projects -->
+    <section id="projects">
+        <div class="projects__wrapper container">
+            <h1 class="title section-title p-relative-1" data-text="Title">Projects</h1>
+            <div class="desc section-desc p-relative-1 text-desc"> Things I’ve built so far</div>
+
+            <div class="splide splide-prodjects p-relative-1 mt-5">
+                <div class="splide__track">
+                    <ul class="list__item splide__list">
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/lacoste-image.webp" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://lacoste.com.vn/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        Lacoste Digital Plagship
+                                    </h2>
+                                    <div class="desc text-desc">This is a webiste providing services to introduce and sell products under the Lacoste brand.</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, PHP, Wordpress.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/smarter-image.png" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://smarterlite.com/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        SmarterLite
+                                    </h2>
+                                    <div class="desc text-desc">This is a website that provides services to introduce energy-saving products that are suitable for the environment.</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, GSAP, PHP, Wordpress.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/itav-image.png" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://yourvillage.com.au/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        It Take A Village
+                                    </h2>
+                                    <div class="desc text-desc">This is a website that provides donation services to an organization for charitable purposes.</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, GSAP, PHP, Wordpress, mySQL.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/reformer-image.jpg" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://yourreformer.com.au/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        Your Reformer
+                                    </h2>
+                                    <div class="desc text-desc">Australia’s leading Reformer Pilates bed supplier for at-home pilates practice, can rent or buy.</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, GSAP, Liquid, Shopify, Metafields.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/welly-image.jpg" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://livewelly.co/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        Welly & Welly Kids
+                                    </h2>
+                                    <div class="desc text-desc">This is a website providing introduce and sell packaged smoothies for adults and children, used to improve health.</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, GSAP, Liquid, Shopify, Metafields.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="item-wrapper">
+                                <div class="item-image">
+                                    <img src="./images/bmd-image.webp" alt="">
+                                    <div class="cta d-flex align-items-end justify-content-between w-100 h-100">
+                                        <a href="https://brownies.co.nz/" title="live review">
+                                            <i class="fa-solid fa-link"></i>Live preview</a>
+                                        <a href="#" title="View code">
+                                            <i class="fa-brands fa-github"></i>View code</a>
+                                    </div>
+                                </div>
+                                <div class="item-content">
+                                    <h2 class="title">
+                                        Brownies Mattress Direct
+                                    </h2>
+                                    <div class="desc text-desc">The website providing services for introducing and selling bed and mattress products</div>
+                                    <div class="techstack">
+                                        <span>Tech Stack : </span>
+                                        HTML , JavaScript, SASS, GSAP, Liquid, Shopify, Metafields.
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Projects -->
+
+    <!-- Start Contact -->
+    <section id="contact">
+        <div class="contact__wrapper container p-relative-1">
+            <div class="row">
+                <div class="col-md-10 col-12 mx-auto">
+                    <p>Please contact me by social with</p>
+                    <ul class="list__social d-flex align-items-center justify-content-center">
+                        <li class="social-item">
+                            <a href="https://www.facebook.com/huu.bang.10420321/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <div class="social-item">
+                            <a href="#" title="Skype"><i class="fa-brands fa-skype"></i></a>
+                        </div>
+                        <div class="social-item">
+                            <a href="mailto:huubang0312@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact -->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="footer__wrapper d-flex align-items-center justify-content-between p-relative-1">
+                <div class="copyright">Copyright &copy; 2024 by Ryo | All rights Reserved.</div>
+                <div class="contact">
+                    <ul class="list__social d-flex align-items-center justify-content-center">
+                        <li class="social-item">
+                            <a href="https://www.facebook.com/huu.bang.10420321/" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <div class="social-item">
+                            <a href="#" title="Skype"><i class="fa-brands fa-skype"></i></a>
+                        </div>
+                        <div class="social-item">
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let preLoader = document.getElementById("preLoader");
+
+        window.addEventListener("load", function(){
+            setTimeout(function() {
+                preLoader.classList.add("on-remove");
+                document.body.classList.remove("overflow-hidden");
+
+                setTimeout(function() {
+                    preLoader.remove();
+                }, 10000);
+            }, 4000);
+        })
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.4/dist/js/splide.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/animation.js"></script>
+    <script src="./scripts/particles.min.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+section#contact{
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px){
+        height: 400px;
+    }
+
+    .contact__wrapper{
+        @media (max-width: 768px){
+            padding: 0 20px;
+        }
+
+        p{
+            @include typo($font-primary, 32px,700,32px,$color-white);
+            text-align: center;
+
+            @media (max-width: 768px){
+                font-size: 24px;
+            }
+
+            &.text-color{
+                background: linear-gradient(to right, #E70FAA 0%, #00C0FD 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .list__social{
+            list-style: none;
+            font-size: 30px;
+            gap: 10px;
+            padding-left: 0;
+            
+            a{
+                color: var(--color-white);
+            }
+        }
+    }
+}

@@ -1,0 +1,51 @@
+section#techstack{
+    min-height: calc(100vh - 116px);
+
+    display: flex;
+    align-items: center;
+    height: 100vh;
+
+    @media (max-width: 768px){
+        min-height: unset;
+        height: unset;
+    }
+
+    .techstack__wrapper{
+
+        .list__item{
+            list-style: none;
+            row-gap: 90px;
+            margin-top: 80px;
+            padding-left: 0;
+            margin-bottom: 0;
+
+            @media (max-width: 768px){
+                margin-top: 50px;
+                row-gap: 20px;
+            }
+
+            li{
+                
+                .img-wrapper{
+                    width: 100px;
+                    height: 100px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+
+                    @media (max-width: 768px){
+                        width: auto;
+                        height: auto;
+                    }
+
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}

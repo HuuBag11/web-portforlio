@@ -1,0 +1,27 @@
+$font-primary : "Rubik", sans-serif;
+$font-secondary : "Archivo", sans-serif;
+
+:root{
+    --color-white: #FFF;
+    --color-black: #000;
+    --bg-button: #272727;
+    --color-gray: #363636;
+    --color-box-shadow: rgba(0, 0, 0, 0.7);
+    --dark-content: #666666;
+}
+
+$text-color : #4F5665;
+$heading-color : #0B132A;
+$primary-color : #0ef;
+$gray-color : #DDE0E4;
+$gray-light-color : #FBFBFB;
+$gray-lighter-color : #ddd;
+
+$color-white : var(--color-white);
+$color-black : var(--color-black);
+$color-bg : var(--color-black);
+$bg-button : var(--bg-button);
+$color-bg-second : #323946;
+$color-gray: var(--color-gray);
+$color-box-shadow: var(--color-box-shadow);
+$dark-content: var(--dark-content);

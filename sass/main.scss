@@ -1,0 +1,17 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "preLoader";
+@import "menuPopup";
+@import "header";
+@import "global";
+@import "animation";
+@import "sectionHome";
+@import "sectionTechStack";
+@import "sectionProjects";
+@import "sectionAbout";
+@import "sectionContact";
+@import "footer";
+
+// sass ./sass/main.scss ./general/main.css --watch
+// https://www.youtube.com/watch?v=Tkp3FDgOueM&ab_channel=Codehal

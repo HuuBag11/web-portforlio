@@ -1,0 +1,18 @@
+{
+  "name": "portforlio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  },
+  "devDependencies": {
+    "sass": "^1.65.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "sass ./sass/main.scss ./general/main.css --watch"
+  },
+  "author": "",
+  "license": "ISC"
+}
