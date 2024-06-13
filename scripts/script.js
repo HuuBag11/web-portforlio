@@ -116,7 +116,7 @@ ScrollTrigger.create({
 function splideProjects(){
     if($(".splide-prodjects").length){
         var splide = new Splide( '.splide-prodjects', {
-            type   : 'slide',
+            type   : 'loop',
             perPage: 3,
             perMove: 1,
             autoplay: true,
